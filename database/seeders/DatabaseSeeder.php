@@ -22,9 +22,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             AgentsTableSeeder::class,
-            ChpAgentDetailsTableSeeder::class,
-            HorsChpAgentDetailsTableSeeder::class,
-            RecruitmentHistoryTableSeeder::class,
         ]);
     }
 }

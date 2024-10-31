@@ -1,29 +1,45 @@
 <?php
 
 return [
-    'recruitment_type' => [
-        '1er_recrutement' => '1er Recrutement',
-        'detachement' => 'Détachement',
-        'mutation' => 'Mutation',
-        'mise_a_disposition' => 'Mise à disposition',
+    'category' => [
+        'contractuelle' => 'Contractuelle',
+        'fonctionnaire_chp' => 'Fonctionnaire du CHP',
     ],
-    
+    'sub_category' => [
+        'stagiaire' => 'Stagiaire',
+        'chu' => 'CHU',
+        'autre' => 'Autre',
+    ],
     'affectation' => [
-        'provisoire' => 'Provisoire',
         'definitive' => 'Définitive',
+        'provisoire' => 'Provisoire',
     ],
-    
-    'status' => [
+    'statut' => [
         'stagiaire' => 'Stagiaire',
         'titulaire' => 'Titulaire',
     ],
-    
     'position' => [
         'en_activite' => 'En activité',
+        'en_activite_mis_a_disposition' => 'En activité (mis à disposition)',
+        'en_activite_decharge' => 'En activité (décharge)',
+        'detachement' => 'Détachement',
+        'en_disponibilite' => 'En disponibilité',
     ],
-
-    'contract_type' => [
-        'stagiaire' => 'Stagiaire',
-        'contractuel' => 'Contractuel',
+    'motif_entree' => [
+        'mis_a_disposition' => 'Mis à disposition',
+        'detachement' => 'Détachement',
+        'mutation' => 'Mutation',
+    ],
+    'type_mouvement' => [
+        'reunion_de_conjoint' => 'Réunion de conjoint',
+        'zone_acces_difficile' => 'Zone d’accès difficile',
+        'regulier_local_regional_national' => 'Régulier (local-régional-national)',
+        'raisons_de_sante' => 'Raisons de santé',
+    ],
+    'situation_familiale' => [
+        'M' => 'Marié',
+        'C' => 'Célibataire',
+        'D' => 'Divorcer',
+        'V' => 'Veuve',
     ],
 ];

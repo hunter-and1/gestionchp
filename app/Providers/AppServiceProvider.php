@@ -4,6 +4,11 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
+use App\Models\AgentExtraInformation;
+use App\Models\AgentSituationAdministrative;
+use App\Observers\AgentExtraInformationObserver;
+use App\Observers\AgentSituationAdministrativeObserver;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -11,7 +16,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Debugbar', \Barryvdh\Debugbar\Facades\Debugbar::class);
     }
 
     /**
@@ -19,6 +25,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        AgentExtraInformation::observe(AgentExtraInformationObserver::class);
+        AgentSituationAdministrative::observe(AgentSituationAdministrativeObserver::class);
     }
 }

@@ -9,23 +9,28 @@ class Agent extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['a_firstname', 'a_lastname', 'a_category'];
 
-    // Relationship with CHP Agent Details
-    public function chpAgentDetail()
-    {
-        return $this->hasOne(ChpAgentDetail::class);
-    }
+    protected $fillable = [
+        'category',
+        'sub_category',
+        'affectation',
+        'statut',
+        'position',
+        'motif_entree',
+        'type_mouvement',
+        'reference',
+        'date_reference',
+        'observation',
+        'nom_fr',
+        'prenom_fr',
+        'prenom_ar',
+        'nom_ar',
+        'cin',
+        'ppr',
+        'date_naissance',
+        'lieu_naissance_fr',
+        'lieu_naissance_ar',
+        'date_recrutement',
+    ];
 
-    // Relationship with HORS-CHP Agent Details
-    public function horsChpAgentDetail()
-    {
-        return $this->hasOne(HorsChpAgentDetail::class);
-    }
-
-    // Relationship with Recruitment History
-    public function recruitmentHistory()
-    {
-        return $this->hasMany(RecruitmentHistory::class);
-    }
 }
