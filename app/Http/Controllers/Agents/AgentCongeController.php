@@ -63,7 +63,6 @@ class AgentCongeController extends Controller
         }
     }
 
-
     public function store(Request $request, Agent $agent)
     {
         $request->validate([
